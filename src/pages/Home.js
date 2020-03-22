@@ -47,11 +47,11 @@ export default ({ onStart }) => {
     <main role="main">
       <section className="jumbotron text-center">
         <div className="container">
-          <h1>Album example</h1>
+          <h1>GH Repo Translations</h1>
           <p className="lead text-muted">
-            Something short and leading about the collection below—its contents,
-            the creator, etc. Make it short and sweet, but not too short so
-            folks don’t simply skip over it entirely.
+            This tool allows you to load translations from any open-source
+            repository and modify them. Once you're ready, it will create a Pull
+            Request for you. Currently only *.json files can be handled.
           </p>
           <form onSubmit={handleStart}>
             <div className="row">
