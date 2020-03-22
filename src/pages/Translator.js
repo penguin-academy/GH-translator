@@ -16,7 +16,7 @@ export default ({ languages, gh }) => {
   const saveHandler = () => {
     setDisabled(true)
     setError('')
-    fetch('http://localhost:3001/pr/new', {
+    fetch('https://penguin-utility-server.herokuapp.com/pr/new', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

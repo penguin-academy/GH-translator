@@ -16,7 +16,7 @@ export default ({ onStart }) => {
     setDisabled(true)
     setError('')
 
-    fetch('http://localhost:3001/pr/load', {
+    fetch('https://penguin-utility-server.herokuapp.com/pr/load', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ repoLink, branch, folder })
