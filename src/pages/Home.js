@@ -32,7 +32,7 @@ export default ({ onStart }) => {
             'No files found to translate. I can only work with *.json files at the moment.'
           )
         }
-        onStart(res)
+        onStart(res, { repoLink, branch, folder })
       })
       .catch(error => {
         setError(
