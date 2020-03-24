@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
+import lookup from '../utilities/langLookup'
 import './Translator.css'
 
 export default ({ languages, gh }) => {
@@ -50,8 +51,8 @@ export default ({ languages, gh }) => {
   return (
     <>
       <Header
-        first={first}
-        second={second}
+        first={lookup(first)}
+        second={lookup(second)}
         saveHandler={saveHandler}
         disabled={disabled}
       />
@@ -89,6 +90,12 @@ export default ({ languages, gh }) => {
               setParentState2={setState2}
               title2={second}
             />
+            {!Object.entries(state).length && (
+              <p>
+                Empyt first language. Please reload the page and select a
+                different first language.
+              </p>
+            )}
           </>
         )}
       </div>

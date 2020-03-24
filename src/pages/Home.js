@@ -4,7 +4,7 @@ export default ({ onStart }) => {
   const [repoLink, setRepoLink] = useState(
     'https://github.com/penguin-academy/covid-19-py'
   )
-  const [branch, setBranch] = useState('jmayalag-feature/i18n')
+  const [branch, setBranch] = useState('develop')
   const [folder, setFolder] = useState('src/i18n')
 
   const [error, setError] = useState('')

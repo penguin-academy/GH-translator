@@ -24,7 +24,7 @@ const languages = [
 
 const gh = {
   repoLink: 'https://github.com/penguin-academy/covid-19-py',
-  branch: 'jmayalag-feature/i18n',
+  branch: 'develop',
   folder: 'src/i18n'
 }
 

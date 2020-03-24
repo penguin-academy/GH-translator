@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
 
+import lookup from '../utilities/langLookup'
+
 export default ({ languages, onContinue }) => {
   const [first, setFirst] = useState('')
   const [second, setSecond] = useState('')
   const [error, setError] = useState('')
 
   if (first !== '' && first === second) setSecond('')
+
+  console.log(languages[0].name.split('.json')[0])
+  console.log(lookup(languages[0].name.split('.json')[0]))
 
   const firstLanguages = languages.map(l => l.name.split('.json')[0])
   const secondLanguages = languages
@@ -49,7 +54,7 @@ export default ({ languages, onContinue }) => {
                     <option value="">Select a Language</option>
                     {firstLanguages.map(l => (
                       <option key={l} value={l}>
-                        {l}
+                        {lookup(l)}
                       </option>
                     ))}
                   </select>
@@ -70,7 +75,7 @@ export default ({ languages, onContinue }) => {
                     <option value="">Select a Language</option>
                     {secondLanguages.map(l => (
                       <option key={l} value={l}>
-                        {l}
+                        {lookup(l)}
                       </option>
                     ))}
                   </select>
